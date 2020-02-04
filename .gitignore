@@ -1,0 +1,14 @@
+# Don't edit this file!
+# If you have special needs, Please talk to Build Engineering so we can keep it performant and legible.
+# But please, just place all your build output and artifacts in artifacts/ or build/ .
+
+syntax:glob # Beware: globs are not rooted but matches in any dir - don't make them too generic ... or use re
+
+# Where all generated stuff should go:
+build
+platform/ios/render/libs
+platform/android/.gradle
+platform/android/.idea
+platform/android/app/.cxx
+platform/android/app/build
+.vscode
