@@ -6,7 +6,7 @@
 #include <iostream>
 #include <cstdlib>
 
-#include "gfx/gfx.h"
+#include "core/Perch.h"
 
 int mWidth = 800;
 int mHeight = 600;
@@ -19,7 +19,7 @@ int main(int argc, char * argv[]) {
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-    GLFWwindow* mWindow = glfwCreateWindow(mWidth, mHeight, "Render", nullptr, nullptr);
+    GLFWwindow* mWindow = glfwCreateWindow(mWidth, mHeight, "PerchRender", nullptr, nullptr);
 
     if (mWindow == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -34,16 +34,16 @@ int main(int argc, char * argv[]) {
     //std::cout << "OpenGL " << glGetString(GL_VERSION) << std::endl;
 
 #ifdef WIN32
-    gfxInit("win");
+    perchInit("win");
 #else
-    gfxInit("osx");
+    perchInit("osx");
 #endif
 
     // Viewport
     int width, height;
     glfwGetFramebufferSize(mWindow, &width, &height);
     glViewport(0, 0, width, height);
-    gfxResize(width, height);
+    perchResize(width, height);
 
     // Rendering Loop
     while (!glfwWindowShouldClose(mWindow)) {
@@ -53,7 +53,7 @@ int main(int argc, char * argv[]) {
         // Background Fill Color
         //glClearColor(1.0f, 0.25f, 0.25f, 1.0f);
         //glClear(GL_COLOR_BUFFER_BIT);
-        gfxTick();
+        perchTick();
 
         // Flip Buffers and Draw
         glfwSwapBuffers(mWindow);

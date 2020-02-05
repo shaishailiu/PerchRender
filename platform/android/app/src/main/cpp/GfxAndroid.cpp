@@ -28,7 +28,7 @@
 #include <string>
 
 #include "core/core.h"
-#include "gfx/gfx.h"
+#include "core/Perch.h"
 
 #define  LOG_TAG    "libgl2jni"
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
@@ -189,18 +189,18 @@ extern "C" {
 JNIEXPORT void JNICALL Java_me_mecg_render_GL2JNILib_init(JNIEnv * env, jobject obj)
 {
     //setupGraphics(width, height)
-    gfxInit("Android");
+    perchInit("Android");
 }
 
 JNIEXPORT void JNICALL Java_me_mecg_render_GL2JNILib_step(JNIEnv * env, jobject obj)
 {
     //renderFrame();
-    gfxTick();
+    perchTick();
 }
 
 JNIEXPORT void JNICALL Java_me_mecg_render_GL2JNILib_resize(JNIEnv * env, jobject obj,  jint width, jint height)
 {
     setupGraphics(width, height);
-    gfxResize(width,height);
+    perchResize(width,height);
 }
 

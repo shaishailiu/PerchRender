@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Render)
+project(PerchRender)
 
 set(ROOT_FOLDER ${CMAKE_CURRENT_SOURCE_DIR}/../../)
 file(GLOB RUNTIME_SRC ${ROOT_FOLDER}/runtime/*/*.*)
@@ -63,6 +63,6 @@ file(GLOB SOURCES "main.cpp" ${RUNTIME_SRC} ${DEPENDENT_SRC} ${GLAD_FILES})
 
 group_vs(${SOURCES})
 
-add_executable(Render ${SOURCES})
+add_executable(PerchRender ${SOURCES})
 
-target_link_libraries(Render ${COMMON_LIBS})
+target_link_libraries(PerchRender ${COMMON_LIBS})

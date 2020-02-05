@@ -23,7 +23,7 @@
 
 <resources>
     <!-- Simple strings. -->
-    <string name="gl2jni_activity">render</string>
+    <string name="gl2jni_activity">Perch</string>
 
 </resources>
 
