@@ -1,18 +1,18 @@
 #import "GfxIOS.h"
-#include "gfx/gfx.h"
+#include "core/Perch.h"
 
 @implementation GfxIOS
 
 - (void)resize:(int)width :(int)height { 
-    gfxResize(width, height);
+    perchResize(width, height);
 }
 
 - (void)tick { 
-    gfxTick();
+    perchTick();
 }
 
 - (void)inits { 
-    gfxInit("ios");
+    perchInit("ios");
 }
 
 @end

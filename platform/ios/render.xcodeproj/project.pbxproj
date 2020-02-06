@@ -320,7 +320,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/render/libs/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mecg.me.render;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mecg.perch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/render/libs/include";
@@ -344,7 +344,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/render/libs/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mecg.me.render;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mecg.perch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/render/libs/include";
