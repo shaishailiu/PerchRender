@@ -2,6 +2,8 @@
 #include "log.h"
 #include "gl.h"
 
+#include "core/Engine.h"
+
 static void printGLString(const char *name, GLenum s) {
     const char *v = (const char *)glGetString(s);
     Log("GL %s = %s\n", name, v);
@@ -13,6 +15,8 @@ void perchInit(std::string info) {
     printGLString("Vendor", GL_VENDOR);
     printGLString("Renderer", GL_RENDERER);
     printGLString("Extensions", GL_EXTENSIONS);
+
+    instance<Engine>().startUp();
 }
 void perchResize(int w, int h) {
     Log("engin resize : %d,%d \n", w, h);
