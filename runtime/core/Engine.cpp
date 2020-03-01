@@ -12,5 +12,5 @@ Engine::~Engine()
 void Engine::startUp()
 {
     Log("Engine start\n");
-    _gfxServer.startUp();
+    _gfxServer.startUp(); 
 }
