@@ -1,5 +1,7 @@
 #pragma once
 
+#include "threads/StreamRingBuffer.h"
+
 class GfxClient
 {
 public:
@@ -7,7 +9,7 @@ public:
     ~GfxClient();
     void clear();
 private:
-    
+    StreamRingBuffer* commandBuffer;
 };
 
 
