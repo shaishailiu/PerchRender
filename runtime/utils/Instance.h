@@ -1,11 +1,9 @@
-#ifndef _INSTANCE_H_
-#define _INSTANCE_H_
+#pragma once
 
 template<typename T>
-T& instance()
+T& Instance()
 {
     static T t;
     return t;
 }
 
-#endif // !_INSTANCE_H_

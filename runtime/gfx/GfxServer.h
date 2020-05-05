@@ -1,5 +1,4 @@
-#ifndef _GFXSERVER_H_
-#define _GFXSERVER_H_
+#pragma once
 
 class GfxServer
 {
@@ -9,4 +8,3 @@ private:
     void run();
 };
 
-#endif // !_GFXSERVER_H_

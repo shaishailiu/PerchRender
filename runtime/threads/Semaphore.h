@@ -1,5 +1,4 @@
-#ifndef _SEMAPHORE_H_
-#define _SEMAPHORE_H_
+#pragma once
 
 #include <mutex>
 #include <condition_variable>
@@ -35,4 +34,3 @@ public:
     }
 };
 
-#endif // !_SEMAPHORE_H_

@@ -16,12 +16,15 @@ void perchInit(std::string info) {
     printGLString("Renderer", GL_RENDERER);
     printGLString("Extensions", GL_EXTENSIONS);
 
-    instance<Engine>().startUp();
+    Instance<Engine>().startUp();
 }
 void perchResize(int w, int h) {
     Log("engin resize : %d,%d \n", w, h);
 }
 void perchTick() {
+    Instance<Engine>().beginFrame();
     glClearColor(1.0f, 0.25f, 1.25f, 1.0f);
     glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+    Instance<Engine>().endFrame();
 }
+

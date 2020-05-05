@@ -5,9 +5,9 @@
 #include <condition_variable>
 
 #include "log.h"
-#include "utils/Semaphore.h"
+#include "threads/Semaphore.h"
 
-//Semaphore semaphore;
+Semaphore semaphore;
 
 
 void GfxServer::startUp()
@@ -21,10 +21,10 @@ void GfxServer::startUp()
 
 void GfxServer::run()
 {
-    //semaphore.wait();
-    //while (true)
-    //{
+    semaphore.wait();
+    while (true)
+    {
         Log("GfxServer::run\n");
-    //}
+    }
 }
 

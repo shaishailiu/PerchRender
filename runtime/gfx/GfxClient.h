@@ -1,14 +1,13 @@
-#ifndef _GFXCLIENT_H_
-#define _GFXCLIENT_H_
+#pragma once
+
 class GfxClient
 {
 public:
     GfxClient();
     ~GfxClient();
-
+    void clear();
 private:
-
+    
 };
 
 
-#endif // !_GFXCLIENT_H_

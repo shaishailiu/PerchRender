@@ -1,5 +1,4 @@
-#ifndef _ENGINE_H_
-#define _ENGINE_H_
+#pragma once
 
 #include "utils/Instance.h"
 #include "gfx/GfxServer.h"
@@ -12,10 +11,10 @@ public:
     ~Engine();
 
     void startUp();
+    void beginFrame();
+    void endFrame();
 private:
     GfxServer _gfxServer;
     GfxClient _gfxClient;
 };
 
-
-#endif // !_ENGINE_H_
