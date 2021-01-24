@@ -75,6 +75,10 @@ void* StreamRingBuffer::getReadPointer(UInt32 size, UInt32 alignment)
     {
         
     }
+    else 
+    {
+        //processOutOfBufferToRead()
+    }
     writer.pos = end;
     return &buffer[pos];
 }

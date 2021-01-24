@@ -12,7 +12,8 @@ Engine::~Engine()
 void Engine::startUp()
 {
     Log("Engine start\n");
-    _gfxServer.startUp(); 
+    StreamRingBuffer* commandBuffer = _gfxClient.startUp();
+    _gfxServer.startUp(commandBuffer);
 }
 
 void Engine::beginFrame()

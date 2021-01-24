@@ -4,7 +4,7 @@
 
 GfxClient::GfxClient()
 {
-    commandBuffer = new StreamRingBuffer(RING_BUFFER_SIZE);
+    
 }
 
 GfxClient::~GfxClient()
@@ -13,5 +13,11 @@ GfxClient::~GfxClient()
 
 void GfxClient::clear()
 {
+    
+}
 
+StreamRingBuffer* GfxClient::startUp()
+{
+    _commandBuffer = new StreamRingBuffer(RING_BUFFER_SIZE);
+    return _commandBuffer;
 }

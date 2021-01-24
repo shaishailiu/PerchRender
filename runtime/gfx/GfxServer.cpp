@@ -10,18 +10,19 @@
 Semaphore semaphore;
 
 
-void GfxServer::startUp()
+void GfxServer::startUp(StreamRingBuffer* commandBuffer)
 {
+    this->_commandBuffer = commandBuffer;
     Log("GfxServer::startUp\n");
     std::thread t(&GfxServer::run,this);
-    Log("GfxServer::startUp111\n");
+    Log("GfxServer::startHasUp\n");
     //semaphore.notify();
     t.detach();
 }
 
 void GfxServer::run()
 {
-    semaphore.wait();
+    //semaphore.wait();
     while (true)
     {
         Log("GfxServer::run\n");

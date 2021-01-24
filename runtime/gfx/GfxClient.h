@@ -8,8 +8,9 @@ public:
     GfxClient();
     ~GfxClient();
     void clear();
+    StreamRingBuffer* startUp();
 private:
-    StreamRingBuffer* commandBuffer;
+    StreamRingBuffer* _commandBuffer;
 };
 
 
